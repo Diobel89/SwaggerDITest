@@ -14,11 +14,11 @@ builder.Services.AddScoped<IMergeSort, MergeSort>();
 builder.Services.AddScoped<IQuickSort, QuickSort>();
 builder.Services.AddScoped<ISelectionSort, SelectionSort>();
 builder.Services.AddScoped<ITreeSort, TreeSort>();
-builder.Services.AddSwaggerGen(c =>
+builder.Services.AddSwaggerGen(options =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "AddingStuffAndCheckingI", Version = "v1" });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "SortingInts", Version = "v1" });
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 
@@ -41,7 +41,7 @@ if (app.Environment.IsDevelopment())
     // tutaj okreœlasz endpoint dla Swagger JSON
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "AddingStuffAndChecking v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "SortingInts v1");
     });
 }
     app.UseHttpsRedirection();
