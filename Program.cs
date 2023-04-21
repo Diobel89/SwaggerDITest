@@ -3,6 +3,7 @@ using SwaggerDITest.Algorythms.Interface;
 using SwaggerDITest.Algorythms;
 using Microsoft.Extensions.Options;
 using System.Reflection;
+using Swashbuckle.AspNetCore.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -23,7 +23,7 @@ namespace SwaggerDITest.Controllers
         public ActionResult<OutputDTO> SortByTree([FromBody] InputDTO inputDTO)
         {
             OutputDTO response = _treeSort.Sort(inputDTO.Unsorted);
-            return View(response);
+            return response;
         }
     }
 }

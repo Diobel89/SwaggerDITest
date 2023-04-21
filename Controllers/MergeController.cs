@@ -25,7 +25,7 @@ namespace SwaggerDITest.Controllers
         public ActionResult<OutputDTO> SortByMerge([FromBody] InputDTO inputDTO)
         {
             OutputDTO response = _mergeSort.Sort(inputDTO.Unsorted, 0, inputDTO.Unsorted.Length);
-            return View(response);
+            return response;
         }
     }
 }

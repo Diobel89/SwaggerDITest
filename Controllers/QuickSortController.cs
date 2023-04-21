@@ -24,7 +24,7 @@ namespace SwaggerDITest.Controllers
         public ActionResult<OutputDTO> SortByQuick([FromBody] InputDTO inputDTO)
         {
             OutputDTO response = _quickSort.Sort(inputDTO.Unsorted, 0, inputDTO.Unsorted.Length);
-            return View(response);
+            return response;
         }
     }
 }

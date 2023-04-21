@@ -22,7 +22,7 @@ namespace SwaggerDITest.Controllers
         public ActionResult<OutputDTO> SortByBubble([FromBody] InputDTO inputDTO)
         {
             OutputDTO response = _bubbleSort.Sort(inputDTO.Unsorted);
-            return View(response);
+            return response;
         }
         //[Produces("application/json")]
         //public OutputDTO Bubble(InputDTO inputDTO)

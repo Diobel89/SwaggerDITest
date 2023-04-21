@@ -23,7 +23,7 @@ namespace SwaggerDITest.Controllers
         public ActionResult<OutputDTO> SortBySelection([FromBody] InputDTO inputDTO)
         {
             OutputDTO response = _selectionSort.Sort(inputDTO.Unsorted);
-            return View(response);
+            return response;
         }
     }
 }
