@@ -24,15 +24,5 @@ namespace SwaggerDITest.Controllers
             OutputDTO response = _bubbleSort.Sort(inputDTO.Unsorted);
             return response;
         }
-        //[Produces("application/json")]
-        //public OutputDTO Bubble(InputDTO inputDTO)
-        //{
-        //    OutputDTO data = _bubbleSort.Sort(inputDTO.Unsorted);
-        //    return data;
-        //}
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
     }
 }
