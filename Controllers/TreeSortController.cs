@@ -20,9 +20,9 @@ namespace SwaggerDITest.Controllers
         [HttpPost]
         [Route("/tree")]
         [Produces("application/json")]
-        public ActionResult<OutputDTO> SortByTree([FromBody] InputDTO inputDTO)
+        public ActionResult<DataSetResponse> SortByTree([FromBody] DataSetRequest inputDTO)
         {
-            OutputDTO response = _treeSort.Sort(inputDTO.Unsorted);
+            DataSetResponse response = _treeSort.Sort(inputDTO.Unsorted);
             return response;
         }
     }

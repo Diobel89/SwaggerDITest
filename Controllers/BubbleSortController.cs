@@ -19,9 +19,9 @@ namespace SwaggerDITest.Controllers
         [HttpPost]
         [Route("/bubble")]
         [Produces("application/json")]
-        public ActionResult<OutputDTO> SortByBubble([FromBody] InputDTO inputDTO)
+        public ActionResult<DataSetResponse> SortByBubble([FromBody] DataSetRequest inputDTO)
         {
-            OutputDTO response = _bubbleSort.Sort(inputDTO.Unsorted);
+            DataSetResponse response = _bubbleSort.Sort(inputDTO.Unsorted);
             return response;
         }
     }

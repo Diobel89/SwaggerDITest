@@ -19,9 +19,9 @@ namespace SwaggerDITest.Controllers
         [HttpPost]
         [Route("/insertion")]
         [Produces("application/json")]
-        public ActionResult<OutputDTO> SortByInsertion([FromBody] InputDTO inputDTO)
+        public ActionResult<DataSetResponse> SortByInsertion([FromBody] DataSetRequest inputDTO)
         {
-            OutputDTO response = _insertionSort.Sort(inputDTO.Unsorted);
+            DataSetResponse response = _insertionSort.Sort(inputDTO.Unsorted);
             return response;
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace SwaggerDITest.Models
 {
-    public class InputDTO
+    public class DataSetRequest
     {
         public int[]? Unsorted { get; set; }
     }

@@ -6,7 +6,7 @@ namespace SwaggerDITest.Algorythms
 {
     public class QuickSort : IQuickSort
     {
-        public OutputDTO Sort(int[] array, int leftIndex, int rightIndex)
+        public DataSetResponse Sort(int[] array, int leftIndex, int rightIndex)
         {
             long time;
             Stopwatch watch = new Stopwatch();
@@ -47,7 +47,7 @@ namespace SwaggerDITest.Algorythms
             watch.Stop();
             time = watch.ElapsedTicks;
 
-            OutputDTO data = new OutputDTO() { AlgorithmName = "Quick Sort", Sorted = array, TotalTime = time };
+            DataSetResponse data = new DataSetResponse() { AlgorithmName = "Quick Sort", Sorted = array, TotalTime = time };
             return data;
         }
     }

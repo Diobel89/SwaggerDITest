@@ -20,9 +20,9 @@ namespace SwaggerDITest.Controllers
         [HttpPost]
         [Route("/selection")]
         [Produces("application/json")]
-        public ActionResult<OutputDTO> SortBySelection([FromBody] InputDTO inputDTO)
+        public ActionResult<DataSetResponse> SortBySelection([FromBody] DataSetRequest inputDTO)
         {
-            OutputDTO response = _selectionSort.Sort(inputDTO.Unsorted);
+            DataSetResponse response = _selectionSort.Sort(inputDTO.Unsorted);
             return response;
         }
     }

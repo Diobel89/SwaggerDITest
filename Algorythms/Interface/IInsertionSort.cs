@@ -4,6 +4,6 @@ namespace SwaggerDITest.Algorythms.Interface
 {
     public interface IInsertionSort
     {
-        public OutputDTO Sort(int[] array);
+        public DataSetResponse Sort(int[] array);
     }
 }

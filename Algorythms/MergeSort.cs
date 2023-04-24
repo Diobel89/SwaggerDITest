@@ -6,7 +6,7 @@ namespace SwaggerDITest.Algorythms
 {
     public class MergeSort : IMergeSort
     {
-        public OutputDTO Sort(int[] array, int left, int right)
+        public DataSetResponse Sort(int[] array, int left, int right)
         {
             long time;
             Stopwatch watch = new Stopwatch();
@@ -23,7 +23,7 @@ namespace SwaggerDITest.Algorythms
             }
             watch.Stop();
             time = watch.ElapsedTicks;
-            OutputDTO data = new OutputDTO() { AlgorithmName = "Merge Sort", Sorted = array, TotalTime = time };
+            DataSetResponse data = new DataSetResponse() { AlgorithmName = "Merge Sort", Sorted = array, TotalTime = time };
             return data;
         }
         public void MergeArray(int[] array, int left, int middle, int right)

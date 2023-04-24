@@ -6,7 +6,7 @@ namespace SwaggerDITest.Algorythms
 {
     public class BubbleSort : IBubbleSort
     {
-        public OutputDTO Sort(int[]? array)
+        public DataSetResponse Sort(int[]? array)
         {
             long time;
             Stopwatch watch = new Stopwatch();
@@ -24,7 +24,7 @@ namespace SwaggerDITest.Algorythms
                     }
             watch.Stop();
             time = watch.ElapsedTicks;
-            OutputDTO data = new OutputDTO() { AlgorithmName = "Bubble Sort", Sorted = array, TotalTime = time };
+            DataSetResponse data = new DataSetResponse() { AlgorithmName = "Bubble Sort", Sorted = array, TotalTime = time };
             return data;
         }
     }

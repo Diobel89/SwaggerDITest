@@ -6,7 +6,7 @@ namespace SwaggerDITest.Algorythms
 {
     public class SelectionSort : ISelectionSort
     {
-        public OutputDTO Sort(int[] array)
+        public DataSetResponse Sort(int[] array)
         {
             long time;
             Stopwatch watch = new Stopwatch();
@@ -32,7 +32,7 @@ namespace SwaggerDITest.Algorythms
             }
             watch.Stop();
             time = watch.ElapsedTicks;
-            OutputDTO data = new OutputDTO() { AlgorithmName = "Selection Sort", Sorted = array, TotalTime = time };
+            DataSetResponse data = new DataSetResponse() { AlgorithmName = "Selection Sort", Sorted = array, TotalTime = time };
             return data;
         }
     }

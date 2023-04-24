@@ -47,7 +47,7 @@ namespace SwaggerDITest.Algorythms
             }
 
         }
-        public OutputDTO Sort(int[] numbers)
+        public DataSetResponse Sort(int[] numbers)
         {
             long time;
             Stopwatch watch = new Stopwatch();
@@ -58,7 +58,7 @@ namespace SwaggerDITest.Algorythms
             tree.treeins(numbers);
             watch.Stop();
             time = watch.ElapsedTicks;
-            OutputDTO data = new OutputDTO() { AlgorithmName = "Tree Sort", Sorted = numbers, TotalTime = time };
+            DataSetResponse data = new DataSetResponse() { AlgorithmName = "Tree Sort", Sorted = numbers, TotalTime = time };
             return data;
         }
     }
