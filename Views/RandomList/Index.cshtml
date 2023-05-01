@@ -1,0 +1,20 @@
+﻿@model SwaggerDITest.Models.RandomValues
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<form method="POST" asp-action="Generate" asp-controller="RandomList">
+    <div id="Ask">
+        <span>Enter Min Int: </span> @Html.TextBoxFor(model => model.Min)<br/>
+        <span>Enter Max Int: </span> @Html.TextAreaFor(model => model.Max)<br/>
+        <span>Enter How Many: </span> @Html.TextAreaFor(model => model.Size)<br/>
+        <input type="radio" value="1" name="AlgorithmName" /><label>Sort by Bybble Sort</label><br />
+        <input type="radio" value="2" name="AlgorithmName" /><label>Sort by Insertion Sort</label><br />
+        <input type="radio" value="3" name="AlgorithmName" /><label>Sort by Merge Sort</label><br />
+        <input type="radio" value="4" name="AlgorithmName" /><label>Sort by Quick Sort</label><br />
+        <input type="radio" value="5" name="AlgorithmName" /><label>Sort by Selection Sort</label><br />
+        <input type="radio" value="6" name="AlgorithmName" /><label>Sort by Tree Sort</label><br />
+    </div>
+    <button typeof="submit">SELECT</button>
+</form>
