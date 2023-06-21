@@ -21,9 +21,9 @@ namespace SwaggerDITest.Controllers
         [HttpPost]
         [Route("/quick")]
         [Produces("application/json")]
-        public ActionResult<DataSetResponse> SortByQuick([FromBody] InputDTO inputDTO)
+        public ActionResult<DataSetResponse> SortByQuick([FromBody] DataSetRequest inputDTO)
         {
-            DataSetResponse response = _quickSort.Sort(inputDTO.Unsorted, 0, inputDTO.Unsorted.Length);
+            DataSetResponse response = _quickSort.Sort(inputDTO.Unsorted, 0, inputDTO.Unsorted.Count);
             return response;
         }
     }

@@ -6,13 +6,13 @@ namespace SwaggerDITest.Algorythms
 {
     public class InsertionSort : IInsertionSort
     {
-        public DataSetResponse Sort(int[] array)
+        public DataSetResponse Sort(List<int> array)
         {
             long time;
             Stopwatch watch = new Stopwatch();
             watch.Reset();
             watch.Start();
-            for (int i = 1; i < array.Length; i++)
+            for (int i = 1; i < array.Count; i++)
             {
                 var key = array[i];
                 var flag = 0;

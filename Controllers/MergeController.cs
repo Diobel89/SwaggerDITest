@@ -22,9 +22,9 @@ namespace SwaggerDITest.Controllers
         [HttpPost]
         [Route("/merge")]
         [Produces("application/json")]
-        public ActionResult<DataSetResponse> SortByMerge([FromBody] InputDTO inputDTO)
+        public ActionResult<DataSetResponse> SortByMerge([FromBody] DataSetRequest inputDTO)
         {
-            DataSetResponse response = _mergeSort.Sort(inputDTO.Unsorted, 0, inputDTO.Unsorted.Length);
+            DataSetResponse response = _mergeSort.Sort(inputDTO.Unsorted, 0, inputDTO.Unsorted.Count);
             return response;
         }
     }

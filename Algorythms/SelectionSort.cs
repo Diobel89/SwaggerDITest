@@ -6,13 +6,13 @@ namespace SwaggerDITest.Algorythms
 {
     public class SelectionSort : ISelectionSort
     {
-        public DataSetResponse Sort(int[] array)
+        public DataSetResponse Sort(List<int> array)
         {
             long time;
             Stopwatch watch = new Stopwatch();
             watch.Reset();
             watch.Start();
-            var arrayLength = array.Length;
+            var arrayLength = array.Count;
 
             for (int i = 0; i < arrayLength - 1; i++)
             {

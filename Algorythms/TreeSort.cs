@@ -7,6 +7,7 @@ namespace SwaggerDITest.Algorythms
     public class TreeSort : ITreeSort
     {
         Node root;
+        private readonly List<int> Temp = new List<int>();
         public TreeSort()
         {
             root = null;
@@ -36,18 +37,19 @@ namespace SwaggerDITest.Algorythms
             {
                 inorderRec(root.left);
                 Console.Write(root.key + " ");
+                Temp.Add(root.key);
                 inorderRec(root.right);
             }
         }
-        void treeins(int[] arr)
+        void treeins(List<int> arr)
         {
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Count; i++) // gdzieś nie tak zwraca 0 zamiast posortowanych ;/
             {
                 insert(arr[i]);
             }
 
         }
-        public DataSetResponse Sort(int[] numbers)
+        public DataSetResponse Sort(List<int> numbers)
         {
             long time;
             Stopwatch watch = new Stopwatch();
@@ -56,9 +58,10 @@ namespace SwaggerDITest.Algorythms
             TreeSort tree = new TreeSort();
 
             tree.treeins(numbers);
+            inorderRec(tree.root);
             watch.Stop();
             time = watch.ElapsedTicks;
-            DataSetResponse data = new DataSetResponse() { AlgorithmName = "Tree Sort", Sorted = numbers, TotalTime = time };
+            DataSetResponse data = new DataSetResponse() { AlgorithmName = "Tree Sort", Sorted = Temp, TotalTime = time };
             return data;
         }
     }

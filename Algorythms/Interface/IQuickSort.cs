@@ -4,6 +4,6 @@ namespace SwaggerDITest.Algorythms.Interface
 {
     public interface IQuickSort
     {
-        public DataSetResponse Sort(int[] array, int leftIndex, int rightIndex);
+        public DataSetResponse Sort(List<int> array, int leftIndex, int rightIndex);
     }
 }

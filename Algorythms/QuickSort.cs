@@ -6,7 +6,7 @@ namespace SwaggerDITest.Algorythms
 {
     public class QuickSort : IQuickSort
     {
-        public DataSetResponse Sort(int[] array, int leftIndex, int rightIndex)
+        public DataSetResponse Sort(List<int> array, int leftIndex, int rightIndex)
         {
             long time;
             Stopwatch watch = new Stopwatch();
@@ -23,7 +23,7 @@ namespace SwaggerDITest.Algorythms
                     i++;
                 }
 
-                while (array[j] > pivot)
+                while (array[j] > pivot) //tutaj też outofrange
                 {
                     j--;
                 }

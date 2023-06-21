@@ -4,6 +4,6 @@ namespace SwaggerDITest.Algorythms.Interface
 {
     public interface IMergeSort
     {
-        public DataSetResponse Sort(int[] array, int left, int right);
+        public DataSetResponse Sort(List<int> array, int left, int right);
     }
 }

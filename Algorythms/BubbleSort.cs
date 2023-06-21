@@ -6,13 +6,13 @@ namespace SwaggerDITest.Algorythms
 {
     public class BubbleSort : IBubbleSort
     {
-        public DataSetResponse Sort(int[]? array)
+        public DataSetResponse Sort(List<int> array)
         {
             long time;
             Stopwatch watch = new Stopwatch();
             watch.Reset();
             watch.Start();
-            var n = array.Length;
+            var n = array.Count;
 
             for (int i = 0; i < n - 1; i++)
                 for (int j = 0; j < n - i - 1; j++)

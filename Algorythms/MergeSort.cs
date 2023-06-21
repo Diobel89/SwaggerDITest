@@ -6,7 +6,7 @@ namespace SwaggerDITest.Algorythms
 {
     public class MergeSort : IMergeSort
     {
-        public DataSetResponse Sort(int[] array, int left, int right)
+        public DataSetResponse Sort(List<int> array, int left, int right)
         {
             long time;
             Stopwatch watch = new Stopwatch();
@@ -26,7 +26,7 @@ namespace SwaggerDITest.Algorythms
             DataSetResponse data = new DataSetResponse() { AlgorithmName = "Merge Sort", Sorted = array, TotalTime = time };
             return data;
         }
-        public void MergeArray(int[] array, int left, int middle, int right)
+        public void MergeArray(List<int> array, int left, int middle, int right)
         {
             var leftArrayLength = middle - left + 1;
             var rightArrayLength = right - middle;
@@ -37,7 +37,7 @@ namespace SwaggerDITest.Algorythms
             for (i = 0; i < leftArrayLength; ++i)
                 leftTempArray[i] = array[left + i];
             for (j = 0; j < rightArrayLength; ++j)
-                rightTempArray[j] = array[middle + 1 + j];
+                rightTempArray[j] = array[middle + 1 + j]; //tutaj jest outofrange
 
             i = 0;
             j = 0;

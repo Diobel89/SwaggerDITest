@@ -1,9 +1,9 @@
 ﻿namespace SwaggerDITest.Models
 {
-    public class OutputDTO
+    public class DataSetResponse
     {
         public string? AlgorithmName { get; set; }
-        public int[]? Sorted { get; set; }
+        public List<int>? Sorted { get; set; }
         public long? TotalTime { get; set; }
     }
 }

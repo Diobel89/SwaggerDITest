@@ -4,6 +4,6 @@ namespace SwaggerDITest.Algorythms.Interface
 {
     public interface ISelectionSort
     {
-        public DataSetResponse Sort(int[] array);
+        public DataSetResponse Sort(List<int> array);
     }
 }

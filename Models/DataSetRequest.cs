@@ -2,6 +2,6 @@
 {
     public class DataSetRequest
     {
-        public int[]? Unsorted { get; set; }
+        public List<int>? Unsorted { get; set; }
     }
 }
